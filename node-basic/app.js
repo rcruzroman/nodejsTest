@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.listen(3000);
 
-*/
+
 
 fs.readFile(fileName, (err, data) => {
 	if(err) {
@@ -38,3 +38,10 @@ fs.readFile(fileName, (err, data) => {
 })
 
 console.log('test async nodejs');
+
+*/
+
+const dataSync = fs.readFileSync(fileName);
+console.log(dataSync.toString());
+
+console.log('test sync nodejs');
